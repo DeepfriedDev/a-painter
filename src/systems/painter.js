@@ -2,6 +2,8 @@
 
 var saveAs = require('../../vendor/saveas.js').saveAs;
 
+AFRAME.TWEEN = require('@tweenjs/tween.js');
+
 AFRAME.registerSystem('painter', {
   init: function () {
 
@@ -238,5 +240,8 @@ AFRAME.registerSystem('painter', {
         self.sceneEl.emit('drawing-upload-progress', {progress: uploadInfo.progress});
       });
     }
+  },
+  tick: function (time, delta) {
+    AFRAME.TWEEN.update();
   }
 });
