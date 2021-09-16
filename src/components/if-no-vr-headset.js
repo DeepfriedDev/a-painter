@@ -2,7 +2,7 @@
 var utils = AFRAME.utils;
 
 /**
- * Set properties if headset is not connected by checking getVRDisplays().
+ * Set properties if headset is not connected by checking getXRDisplays().
  */
 AFRAME.registerComponent('if-no-vr-headset', {
   schema: {
